@@ -25,7 +25,7 @@ $(call inherit-product, build/target/product/languages_full.mk)
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 # Use the Dalvik VM specific for devices with 512 MB of RAM
-$(call inherit-product, frameworks/native/build/phone-xhdpi-512-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Inherit the proprietary vendors
 $(call inherit-product-if-exists, vendor/samsung/codina/codina-vendor.mk)

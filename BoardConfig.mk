@@ -72,7 +72,7 @@ TARGET_SCREEN_WIDTH := 480
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/codina/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/golden/bluetooth/btvendor_codina.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/codina/bluetooth/btvendor_codina.txt
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
