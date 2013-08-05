@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_device_samsung_codina",
+    "target_path": "device/samsung/codina"
+  },
+  {
+    "repository": "android_kernel_samsung_codina",
+    "target_path": "kernel/samsung/codina"
+ },
+ {
+   "repository": "android_vendor_samsung_codina",
+   "target_path": "vendor/samsung/codina"
+  }
+]
