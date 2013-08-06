@@ -4,6 +4,7 @@
 /dev/cm_sia_trace         0444   media      system
 /dev/cm_sva_trace         0444   media      system
 
+
 # XTI trace device
 /dev/stm                  0660   media      system
 
@@ -51,8 +52,6 @@
 /dev/block/mmcblk0p19     0660   system     system
 
 # Sensors
-/dev/mpu                  0660   system     system
-/dev/mpuirq               0660   system     system
-/dev/timerirq             0660   system     system
-
-/dev/block/mmcblk0p19     0660   system     system
+/dev/mpu		  0660   system     system
+/dev/mpuirq		  0660   system     system
+/dev/timerirq		  0660   system     system
