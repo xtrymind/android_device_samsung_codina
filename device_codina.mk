@@ -33,11 +33,11 @@ $(call inherit-product-if-exists, vendor/samsung/codina/codina-vendor.mk)
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/codina/prebuilt/root/init.samsungcodina.rc:root/init.samsungcodina.rc \
-    #device/samsung/golden/prebuilt/root/init.samsunggolden.bt.rc:root/init.samsunggolden.bt.rc \
     device/samsung/codina/prebuilt/root/init.samsungcodina.usb.rc:root/init.samsungcodina.usb.rc \
     device/samsung/codina/prebuilt/root/fstab.samsungcodina:root/fstab.samsungcodina \
     device/samsung/codina/prebuilt/root/ueventd.samsungcodina.rc:root/ueventd.samsungcodina.rc \
     device/samsung/codina/prebuilt/root/prerecovery.rc:root/prerecovery.rc \
+    device/samsung/codina/prebuilt/root/lpm.rc:root/lpm.rc \
     device/samsung/codina/prebuilt/root/lib/modules/j4fs.ko:root/lib/modules/j4fs.ko \
     device/samsung/codina/prebuilt/root/lib/modules/param.ko:root/lib/modules/param.ko
 
@@ -55,13 +55,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/codina/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/codina/prebuilt/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/codina/prebuilt/system/omxloaders:system/omxloaders \
+    device/samsung/codina/prebuilt/system/omxloaders:system/omxloaders 
     #device/samsung/golden/prebuilt/system/etc/omxlibs.txt:system/etc/omxlibs.txt \
     #device/samsung/golden/prebuilt/system/etc/init.d/01omx:system/etc/init.d/01omx
-
-# Egrep
-PRODUCT_COPY_FILES += \
-    #device/samsung/golden/prebuilt/system/bin/egrep:system/bin/egrep
 
 # Dbus
 PRODUCT_COPY_FILES += \
