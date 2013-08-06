@@ -53,16 +53,18 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_KERNEL_SOURCE := kernel/samsung/codina
 TARGET_KERNEL_CONFIG := cyanogenmod_i8160_defconfig
 BOARD_KERNEL_CMDLINE := "console=ttySAC2,115200 consoleblank=0"
-#TARGET_USE_ST_ERICSSON_KERNEL := true
+TARGET_USE_ST_ERICSSON_KERNEL := true
 BOARD_KERNEL_BASE := 0x40000000
 #BOARD_RECOVERY_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/codina/shbootimg.mk
+
 # Graphics
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/codina/prebuilt/system/lib/egl/egl.cfg
-BOARD_EGL_NEEDS_LEGACY_FB := true
+#BOARD_EGL_NEEDS_LEGACY_FB := true
 
 # Screen
 TARGET_SCREEN_HEIGHT := 800
@@ -92,6 +94,7 @@ WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_sta.b
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # RIL
+BOARD_USES_LIBSECRIL_STUB := true
 BOARD_RIL_CLASS := ../../../device/samsung/codina/ril/
 
 # Browser
@@ -100,7 +103,10 @@ ENABLE_WEBGL := true
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
+BOARD_HAS_MR0_STE_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
+MR0_AUDIO_BLOB := true
+BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 
 # USB Mounting
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
@@ -119,3 +125,13 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/codina/recovery/recover
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_NO_MISC_PARTITION := true
+
+# Camera
+BOARD_USES_PROPRIETARY_LIBCAMERA := true
+BOARD_USES_PROPRIETARY_LIBFIMC := true
+COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
+COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
+DISABLE_HW_ID_MATCH_CHECK :=true
+
+# Enable WEBGL in WebKit
+ENABLE_WEBGL := true
