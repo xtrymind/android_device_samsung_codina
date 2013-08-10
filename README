@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2013 The Android Open Source Project
-# Copyright (C) 2013 Óliver García Albertos (oliverarafo@gmail.com)
+# Copyright (C) 2013 Dede Dindin Qudsy (xtrymind@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,60 +19,32 @@
 
 * Description
 
-  This repository is for CM10.1 on Samsung Galaxy SIII Mini a.k.a Samsung Golden.
+  This repository is for CM10.1 on Samsung Galaxy Ace 2 a.k.a Samsung Codina.
   It's still a work in progress.
 
-* How To Build CM10.1 for Samsung Golden
+Working
 
-  - Make a workspace
+* RIL (call/data)
+* Wifi
+* Touch
+* Bluetooth
+* External Storage
+* Sensors
+* Capacitive key backlight
+* Custom kernel with built in CWM 6.0.35
+* Vibrate
 
-  $ mkdir -p ~/cyanogenmod/system
-  $ cd ~/cyanogenmod/system
+Not Working
 
+* Audio ( Speaker and Mic )
+* Camera
+* GPS
+* MTP
+* Mass Storage
+* OMX
+* HW acceleration
+* Torch
 
-  - Do repo init & sync
+Bugs
 
-  $ repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
-
-
-  - Create .repo/local_manifests/roomservice.xml with the following content:
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <manifest>
-      <project name="OliverG96/android_device_samsung_golden" path="device/samsung/golden" />
-      <project name="OliverG96/android_kernel_samsung_golden" path="kernel/samsung/golden" />
-      <project name="OliverG96/android_vendor_samsung_golden" path="vendor/samsung/golden" />
-      <project name="TeamCanjica/android_hardware_u8500" path="hardware/u8500" />
-  </manifest>
-
-  $ repo sync
-
-
-  - Setup vendor
-
-  $ ./vendor/cm/get-prebuilts
-
-
-  - Setup environment
-
-  $ source build/envsetup.sh
-  $ lunch cm_golden-eng
-
-
-  - Build CM10.1
-
-  $ export USE_CCACHE=1
-  $ make -j4 bacon
-
-
-* Thanks
-
-  CyanogenMod
-  alquez
-  modpunk
-  dudeman1996
-  benjamingwwyn
-  lupohirp
-  marcin
-  diego-ch
-  maclaw
+* A little lag on wake up phone
