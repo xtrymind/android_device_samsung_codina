@@ -1,7 +1,6 @@
 #
 # Copyright (C) 2013 The Android Open Source Project
 # Copyright (C) 2013 Óliver García Albertos (oliverarafo@gmail.com)
-# Copyright (C) 2013 Dede Dindin Qudsy (xtrymind@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,8 +15,11 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+------------------------------------------------------------------
 
-ifeq ($(TARGET_DEVICE),codina)
-    include $(call first-makefiles-under,$(LOCAL_PATH))
-endif
+* Description
+
+  This repository is for CM10.1 on Samsung Galaxy Ace 2 a.k.a Samsung Codina.
+  It's still a work in progress.
+
+
