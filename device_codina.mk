@@ -55,9 +55,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/codina/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/codina/prebuilt/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/codina/prebuilt/system/omxloaders:system/omxloaders 
-    #device/samsung/golden/prebuilt/system/etc/omxlibs.txt:system/etc/omxlibs.txt \
-    #device/samsung/golden/prebuilt/system/etc/init.d/01omx:system/etc/init.d/01omx
+    device/samsung/codina/prebuilt/system/omxloaders:system/omxloaders \
+    device/samsung/codina/prebuilt/system/etc/init.d/02omxsym:system/etc/init.d/02omxsym
 
 # Dbus
 PRODUCT_COPY_FILES += \
@@ -87,6 +86,8 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/samsung/codina/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/codina/prebuilt/system/etc/audio_policy.conf:system/vendor/etc/audio_policy.conf \
+    device/samsung/codina/prebuilt/system/etc/Volume.db:system/etc/Volume.db \
     device/samsung/codina/prebuilt/system/etc/asound.conf:system/etc/asound.conf
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -125,6 +126,9 @@ PRODUCT_COPY_FILES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     Torch \
+    libaudioutils \
+    libtinyalsa \
+    SamsungServiceMode \
     com.android.future.usb.accessory
 
 # Non-device-specific props
@@ -140,3 +144,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
  
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
