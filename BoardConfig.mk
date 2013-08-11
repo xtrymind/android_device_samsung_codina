@@ -61,14 +61,14 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/codina/shbootimg.mk
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/codina/configs/egl.cfg
-#BOARD_EGL_NEEDS_LEGACY_FB := true
+BOARD_EGL_NEEDS_LEGACY_FB := true
 USE_OPENGL_RENDERER := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/codina/bt/include
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/codina/bt/vnd_u8500.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/codina/bluetooth/include
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/codina/bluetooth/vnd_u8500.txt
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
